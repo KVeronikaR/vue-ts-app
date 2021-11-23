@@ -2,19 +2,19 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-    <BaseCheckbox></BaseCheckbox>
+    <CustomCard :title="'TEST TITLE'"></CustomCard>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
-import BaseCheckbox from './components/BaseCheckbox.vue';
+import CustomCard from './components/CustomCard.vue';
 
 @Component({
   components: {
     HelloWorld,
-    BaseCheckbox
+    CustomCard
   },
 })
 export default class App extends Vue {}

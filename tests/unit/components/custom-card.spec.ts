@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 
 // Components
-import CustomCard from '@/components/CustomCard'
+import CustomCard from '@/components/CustomCard.vue'
 
 // Utilities
 import { createLocalVue, mount, shallowMount } from '@vue/test-utils'
@@ -11,7 +11,7 @@ Vue.use(Vuetify);
 
 describe('CustomCard.vue', () => {
   const localVue = createLocalVue()
-  let vuetify
+  let vuetify: any
 
   beforeEach(() => {
     vuetify = new Vuetify()
@@ -25,7 +25,7 @@ describe('CustomCard.vue', () => {
     })
 
     // With jest we can create snapshot files of the HTML output
-    // expect(wrapper.html()).toMatchSnapshot()
+    expect(wrapper.html()).toMatchSnapshot()
 
     // We could also verify this differently
     // by checking the text content
