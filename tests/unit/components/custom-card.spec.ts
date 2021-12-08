@@ -14,7 +14,9 @@ describe('CustomCard.vue', () => {
   let vuetify: any
 
   beforeEach(() => {
-    vuetify = new Vuetify()
+    Vue.use(Vuetify);
+
+    vuetify = new Vuetify();
   })
 
   it('should have a custom title and match snapshot', () => {
